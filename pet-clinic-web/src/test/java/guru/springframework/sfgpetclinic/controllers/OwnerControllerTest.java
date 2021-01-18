@@ -47,7 +47,7 @@ class OwnerControllerTest {
         when(this.ownerService.findAll()).thenReturn(this.owners);
 
         this.mockMvc.perform(get("/owners"))
-                .andExpect(status().isOk())
+                .andExpect(status().is4xxClientError())
                 .andExpect(view().name("owners/index"))
                 .andExpect(model().attribute("owners", hasSize(2)));
     }
