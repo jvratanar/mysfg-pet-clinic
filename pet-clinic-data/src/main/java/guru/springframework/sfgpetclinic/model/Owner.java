@@ -36,6 +36,9 @@ public class Owner extends Person {
         this.city = city;
         this.telephone = telephone;
 
+        // if builder patter does not pass anything in
+        // the pets stay initialized because in the upper
+        // declaration it specifies = new Hashset<>();
         if (pets != null) {
             this.pets = pets;
         }

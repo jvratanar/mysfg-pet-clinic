@@ -14,6 +14,9 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "types")
 public class PetType extends BaseEntity {
+    // Builder patter is moved to the constructor
+    // in order to use builder pattern and ordinary
+    // constructor
     @Builder
     public PetType(Long id, String name) {
         super(id);
